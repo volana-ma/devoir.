@@ -1,0 +1,158 @@
+/* Polices */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #2c1d27;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1160px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    background-color: #782221;
+    color: white;
+    padding: 20px 0;
+}
+
+header .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+header .profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* Section contact-bar */
+#contact-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c1d27;
+    color: white;
+    padding: 10px 20px;
+}
+
+.contact-item {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-item.address {
+    text-align: left;
+}
+
+.contact-item.phone {
+    text-align: right;
+}
+
+#contact-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+#contact-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Contenu principal */
+.content {
+    display: flex;
+}
+
+/* Colonne gauche (rouge) */
+.left-column {
+    background-color: #782221;
+    color: white;
+    padding: 10px 15px; /* Petite marge interne pour le texte */
+    flex: 1;
+    margin-right: 10px; /* Ajout d'une marge à droite de la colonne rouge */
+}
+
+.left-column h3 {
+    background-color: #dbc2a4;
+    color: #000; /* Texte noir */
+    padding: 10px;
+    margin: 0 15px 10px 0; /* Marge uniquement à droite */
+    text-align: left;
+    width: calc(100% - 20px); /* Ajuste la largeur pour s'étendre jusqu'au bord gauche */
+    position: relative; /* Nécessaire pour ajustement */
+    left: -15px; /* Décale le cadre jaune pour qu'il commence au bord */
+    border: none;
+}
+
+/* Colonne droite (blanche) */
+.right-column {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+}
+
+.right-column h3 {
+    position: relative;
+    background-color: #dbc2a4;
+    color: #000;
+    padding: 10px;
+    margin: 0;
+}
+
+.right-column h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #782221;
+}
+
+/* Animation au survol */
+.right-section:hover {
+    border-right: 5px solid #782221;
+    transition: border-right 0.3s;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    background-color: #782221;
+    color: white;
+    padding: 20px;
+}
+
+footer .social-bar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-bar img {
+    width: 30px;
+    transition: opacity 0.3s;
+}
+
+footer .social-bar a:hover img {
+    opacity: 0.7;
+}
+
+footer .last-update {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
